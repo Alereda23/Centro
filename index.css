@@ -37,6 +37,18 @@ h1 {
     color: white;
     text-shadow: 4px 3px 3px black;
 }
+
+h4 {
+    position: absolute;
+    z-index: 2;
+    top: 160px;
+    left: 80px;
+    text-align: left;
+    font-family: serif;
+    font-size: 400%;
+    color: white;
+    text-shadow: 4px 3px 3px black;
+}
   
 a {
     color: white;
@@ -52,9 +64,9 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 1;
-}
+  }
   
-.image-container img {
+  .image-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -62,16 +74,16 @@ a {
     width: 100%;
     object-fit: contain;
     opacity: 0;
-}
+  }
   
-.falsaimmagine{
+  .falsaimmagine{
     position: relative;
     top: 0;
     z-index: 0;
     width: 100%;
     background-color: white;
     mix-blend-mode: screen;
-}
+  }
   
 
 
@@ -342,7 +354,7 @@ a {
     padding: 20px;
     margin: 20px;
     overflow: hidden;
-    width: 50%;
+    width: 100%;
 }
 
 .card img {
@@ -480,7 +492,12 @@ footer{
     h1 {
         top: 40px;
       }
-  
+
+    h4{
+        top: 45px;
+        left: 20px;
+    }
+
     .titolo2 {
       top: 300px;
     }
@@ -502,7 +519,7 @@ footer{
     }
   
   }
-  
+
   @media screen and (min-width: 1350px) {
   
     .menu-icon {
