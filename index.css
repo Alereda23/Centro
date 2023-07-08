@@ -480,8 +480,35 @@ footer{
     margin-left: 10px;
     align-items: center;
 }
+
+
+
+
+
+.prenota{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    right: 30%;
+    left: 30%;
+    width: 40%;
+    font-size: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    text-align: center;
+    background-color: #D9D4CE;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.prenota:hover{
+    background-color: #1D19AC;
+    color: white;
+}
   
-  
+
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-width: 1349px) {
   
@@ -490,16 +517,13 @@ footer{
     }
   
     h1 {
-        top: 40px;
-      }
-
-    h4{
-        top: 45px;
-        left: 20px;
+        top: 80px;
+        font-size: 85px;
     }
 
-    .titolo2 {
-      top: 300px;
+    h4 {
+        top: 60px;
+        left: 50px;
     }
   
     .menutotale {
@@ -519,7 +543,7 @@ footer{
     }
   
   }
-
+  
   @media screen and (min-width: 1350px) {
   
     .menu-icon {
