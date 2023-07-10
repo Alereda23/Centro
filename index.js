@@ -132,7 +132,7 @@ window.onload = function() {
   
   /* Carosello di immagini */
   document.addEventListener('DOMContentLoaded', function() {
-    var images = document.getElementsByClassName('carousel1-image');
+    var images = document.getElementsByClassName('carousel-image');
     var currentIndex = 0;
     var intervalId;
     
@@ -165,49 +165,18 @@ window.onload = function() {
       showImage(currentIndex);
     }
     
-    document.getElementById('carousel1-prev').addEventListener('click', prevImage1);
-    document.getElementById('carousel1-next').addEventListener('click', nextImage1);
+    document.getElementById('carousel-prev').addEventListener('click', prevImage1);
+    document.getElementById('carousel-next').addEventListener('click', nextImage1);
     
     showImage(currentIndex);
   });
-  
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    var images = document.getElementsByClassName('carousel2-image');
-    var currentIndex = 0;
-    var intervalId;
-    
-    function showImage(index) {
-      for (var i = 0; i < images.length; i++) {
-        images[i].classList.remove('active');
-      }
-      
-      images[index].classList.add('active');
-      
-      clearInterval(intervalId);
-      intervalId = setInterval(nextImage2, 4000);
-    }
-    
-    function nextImage2() {
-      currentIndex++;
-      if (currentIndex === images.length) {
-        currentIndex = 0;
-      }
-      
-      showImage(currentIndex);
-    }
-    
-    function prevImage2() {
-      currentIndex--;
-      if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-      }
-      
-      showImage(currentIndex);
-    }
-    
-    document.getElementById('carousel2-prev').addEventListener('click', prevImage2);
-    document.getElementById('carousel2-next').addEventListener('click', nextImage2);
-    
-    showImage(currentIndex);
+
+
+
+
+  /* Booking */
+$(function() {
+  $("#check-in, #check-out").datepicker({
+    dateFormat: "dd/mm/yy"
   });
+});
