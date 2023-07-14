@@ -16,7 +16,7 @@ function rejectCookies() {
 
 
 
-window.onload = function() {
+  window.onload = function() {
     var imageContainer = document.getElementById("image-container");
     var images = [
       "image1.jpg",
@@ -173,10 +173,26 @@ window.onload = function() {
 
 
 
+  /* Visualizzare immagini */
+  function showImage(image) {
+    var enlargedImage = document.createElement('div');
+    enlargedImage.className = 'enlarged-image';
+    enlargedImage.onclick = function() {
+      document.body.removeChild(enlargedImage);
+    };
+  
+    var img = document.createElement('img');
+    img.src = image.src;
+    enlargedImage.appendChild(img);
+  
+    document.body.appendChild(enlargedImage);
+  }
+
+
 
   /* Booking */
-$(function() {
-  $("#check-in, #check-out").datepicker({
-    dateFormat: "dd/mm/yy"
+  $(function() {
+    $("#check-in, #check-out").datepicker({
+      dateFormat: "dd/mm/yy"
+    });
   });
-});
