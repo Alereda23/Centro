@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Foresteria | CRLP 2023</title>
+        <title>Club House - Zona Relax | CRLP 2023</title>
         <link href="index.css" rel="stylesheet">
         <script type="text/javascript" src="index.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/76bff0_af8e3096e5334f7a99f820ea88b3d613~mv2.png/v1/fill/w_220,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/CRLP%20logo%20esteso%20color.png">
@@ -25,8 +25,8 @@
                 <a href="#">CANOTTAGGIO</a>
                 <a href="centroestivo.html">CENTRO ESTIVO - IL CENTRO DELL'ESTATE</a>
                 <a href="#">BOATHOUSE - HANGAR BARCHE</a>
-                <a href="#" style="color: white;"><u>FORESTERIA</u></a>
-                <a href="clubhouse.html">CLUB HOUSE</a>
+                <a href="foresteria.html">FORESTERIA</a>
+                <a href="clubhouse.html" style="color: white;"><u>CLUB HOUSE</u></a>
                 <a href="chisiamo.html">CHI SIAMO</a>
                 <div style="display: flex;"><a href="#" style="color: white;"><u>ITA</u></a><a href="#">ENG</a><a href="#">DEU</a></div>
             </div>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="menu" class="menu-right" id="menu7">
-                <a href="#"><span id="club">FORESTERIA &#9660;</span></a>
+                <a href="foresteria.html"><span id="club">FORESTERIA &#9660;</span></a>
                 <ul>
                   <a href="foresteria-primopiano.html"><li>CENTRO REMIERO</li></a>
                   <a href="foresteria-centropusiano.html"><li>PUSIANO - PALAZZO BEAUHARNAIS</li></a>
@@ -96,7 +96,7 @@
             <div class="menu" class="menu-right" id="menu8">
                 <a href="clubhouse.html"><span id="club">CLUB HOUSE &#9660;</span></a>
                 <ul>
-                    <a href="clubhouse-zonarelax.html"><li>ZONA RELAX</li></a>
+                    <a href="#"><li>ZONA RELAX</li></a>
                     <li>PALESTRE</li>
                     <li>SPOGLIATOI</li>
                     <li>AULA DIDATTICA</li>
@@ -131,7 +131,8 @@
     <img class="falsaimmagine" src="FotoHome/Primaimmagine.webp">
 
     <h4>
-        FORESTERIA
+        CLUB HOUSE<br>
+        <div style="font-size: 50%;">ZONA RELAX</div>
     </h4>
         
     <div class="bandieraitalia">
@@ -144,29 +145,33 @@
         <h2>ROW TO GROW (Rema per crescere)</h2>
     </div>
 
-    <div class="totalecard">
-
-        <div class="card">
-            <img src="FotoPrimoPiano/PP7.webp" onclick="showImage(this)" class="clickable-image">
-            <div class="card-body">
-                <h3 class="card-title">PRIMO PIANO CENTRO REMIERO</h3>
-                <p class="card-text">Al primo piano del centro remiero 4 camere da 4 letti ciascuna.</p>
-                <a href="foresteria-primopiano.html" class="btn btn-primary">Vai</a>
-            </div>
-        </div>
-      
-        <div class="card">
-            <img src="FotoCentroPusiano/CP6.webp" onclick="showImage(this)" class="clickable-image">
-            <div class="card-body">
-                <h3 class="card-title">CENTRO DI PUSIANO</h3>
-                <p class="card-text">A soli 2 km dal Centro Remiero, la nostra seconda foresteria disposta su due piani dello storico palazzo Beuharnais. Composta da 22 letti, di prossima espansione a 34.</p>
-                <a href="foresteria-centropusiano.html" class="btn btn-primary">Vai</a>
-            </div>
-        </div>
-
+    <div style="font-size: 30px; margin-left: 10px; margin-right: 10px; padding-bottom: 50px; padding-top: 70px;">    
+        <div style="margin-left: 10px;">La <i><strong>Zona Relax</strong></i> è dotata di:</div>
+        <ul>
+            <li>Reception</li>
+            <li>Lobby Bar con WIFI Smart TV - Netflix</li>
+            <li>Area Meeting</li>
+            <li>Area Relax</li>
+            <li>Distributori automatici bevande e snack</li>
+            <li>Servizio colazioni per ospiti del centro</li>
+        </ul>
     </div>
 
-    <a href="booking.html"><div class="prenota">PRENOTA UN POSTO</div></a>
+
+    <div style="width: 100%; padding-bottom: 70px;">
+        <ul>
+            <div class="carousel-container">
+              <img class="carousel-image" src="FotoZonaRelax/Primaimmagine.webp" alt="Zona Relax 1">
+              <img class="carousel-image" src="FotoZonaRelax/Secondaimmagine.webp" alt="Zona Relax 2">
+              <img class="carousel-image" src="FotoZonaRelax/Terzaimmagine.webp" alt="Zona Relax 3">
+              <img class="carousel-image" src="FotoZonaRelax/Quartaimmagine.webp" alt="Zona Relax 4">      
+                <div class="carousel-controls">
+                    <button id="carousel-prev">&lt;</button>
+                    <button id="carousel-next">&gt;</button>
+                </div>
+            </div>
+        </ul>
+    </div>
 
 
     <footer>
