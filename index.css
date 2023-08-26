@@ -116,7 +116,7 @@ a {
 
 
 /* Popup per i cookie e privacy */
-.overlay {
+.overlay1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +129,7 @@ a {
     z-index: 9999;
 }
   
-.popup {
+.popup1 {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -138,12 +138,49 @@ a {
     position: relative;
 }
   
-.close-btn {
+.close-btn1 {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
+
+
+.overlay2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+  }
+
+  .popup2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+    max-width: 600px;
+    overflow: auto;
+    max-height: 80%;
+  }
+
+  .close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .privacy-link {
+    cursor: pointer;
+  }
   
 
 

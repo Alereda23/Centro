@@ -1,6 +1,15 @@
 /* Popup per i cookie e privacy */
 function closePopup() {
-    document.querySelector('.overlay').style.display = 'none';
+  const overlay1 = document.querySelector('.overlay1');
+  const overlay2 = document.querySelector('.overlay2');
+
+  if (overlay1) {
+    overlay1.style.display = 'none';
+  }
+
+  if (overlay2) {
+    overlay2.style.display = 'none';
+  }
 }
   
 function acceptCookies() {
@@ -12,6 +21,14 @@ function rejectCookies() {
 // Logica per rifiutare i cookie
     closePopup();
 }
+
+
+function openPopup() {
+  document.querySelector('.overlay2').style.display = 'flex';
+}
+
+
+
 
 
 
