@@ -1,0 +1,682 @@
+body {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    font-size: 150%;
+    background-color: white;
+    color: black;
+}
+  
+header {
+    position: fixed;
+    display: flex;
+    z-index: 3;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 12px;
+    background-color: white;
+    opacity: 95%;
+    font-size: 11.5px;
+}
+  
+.logo {
+    position: relative;
+    top: 7px;
+    left: 3px;
+    width: 120px;
+}
+  
+h1 {
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    font-family: serif;
+    font-size: 400%;
+    color: white;
+    text-shadow: 4px 3px 3px black;
+}
+
+h4 {
+    position: absolute;
+    z-index: 2;
+    top: 160px;
+    left: 80px;
+    text-align: left;
+    font-family: serif;
+    font-size: 400%;
+    color: white;
+    text-shadow: 4px 3px 3px black;
+}
+  
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.rowtogrow {
+    color: white;
+}
+
+
+.image-container {
+    position: relative;
+    top: 0px;  
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0;
+  }
+  
+  .falsaimmagine{
+    position: relative;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    background-color: white;
+    mix-blend-mode: screen;
+  }
+  
+
+  
+/* Visualizzare immagini */
+.clickable-image {
+    cursor: pointer;
+}
+  
+.enlarged-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.enlarged-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+
+
+/* Popup per i cookie e privacy */
+.overlay1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+}
+  
+.popup1 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+  
+.close-btn1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+.overlay2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+  }
+
+  .popup2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+    max-width: 600px;
+    overflow: auto;
+    max-height: 80%;
+  }
+
+  .close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .privacy-link {
+    cursor: pointer;
+  }
+  
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+  
+/* The navigation menu links */
+.sidenav a {
+    padding: 24px 8px 24px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.menu-icon {
+    display: inline-block;
+    width: 67px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+  
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 90%;
+    background: white;
+    border: 1px solid black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+  
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+    top: 19.49px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 39px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+  
+.menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+  
+
+
+/* Menu */
+
+/* Stile per il menu posizionato a destra */
+
+#menu1 {
+    right: 0px;
+    width: 15.4px;
+    padding-right: 22px;
+    display: flex;
+}
+
+#menu2 {
+    right: 49px;
+}
+ 
+#menu3 { 
+    right: 238px;
+}
+
+#menu4 {
+    right: 332px;
+}
+
+#menu5 {
+    right: 419px;
+}
+
+#menu6 {
+    right: 670px;
+}
+
+#menu7 {
+    right: 852px;
+}
+
+#menu8{
+    right: 964px;
+}
+
+#menu9{
+    right: 1072px;
+}
+  
+
+/* Stile per il menu */
+
+.menu {
+    position: absolute;
+    top: 12px;
+    display: inline-block;
+    color: #000;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    z-index: 2;
+    text-align: center;
+}
+  
+.menu a {
+    color: #000;
+}
+  
+  
+/* Stile per gli elementi del menu */
+  
+.menu ul {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    top: 100%;
+    left: 50%; /* Sposta il menu a metà della larghezza del menu principale */
+    transform: translateX(-50%); /* Centra il menu rispetto allo span */
+    z-index: 999;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul li {
+    width: 130px; /* Imposta la larghezza dei li a 190px */
+    padding: 10px 20px ;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.2s;
+}
+
+.menu ul li:hover {
+    background-color: rgb(60, 196, 239);
+    color: white;
+}
+
+/* Stile per gli elementi del menu quando ci si passa sopra con il mouse */
+
+.menu:hover ul {
+    display: block;
+}
+  
+  
+
+/* Bandiera Italia */
+
+.bandieraitalia {
+    position: relative;
+    display: flex;
+    top: 12px;
+    height: 5px;
+    border: 1px solid black;
+}
+  
+.verde {
+    background-color: rgb(0, 146, 70);
+    width: 33.333%;
+    height: 5px;
+}
+
+.bianco {
+    background-color: rgb(255, 255, 255);
+    width: 33.333%;
+    height: 5px;
+}
+  
+.rosso {
+    background-color: rgb(206, 43, 55);
+    width: 33.333%;
+    height: 5px;
+}
+
+
+
+.totalecard {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    border-radius: 8px;
+    border: rgb(201, 198, 189) solid 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+
+
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel1-image {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel1-image.active {
+    opacity: 1;
+  }
+
+  .carousel2-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel2-image.active {
+    opacity: 1;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .carousel-controls button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+.btn {
+  position: relative;
+    background-color: rgb(63, 194, 236);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-shadow: 1.5px 1px 1px black;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(12, 111, 169);
+}
+
+
+
+.rowtogrow {
+    position: relative;
+    height: 45px;
+    text-align: center;
+    align-items: center;
+    background-color:rgb(41, 69, 102);
+    text-shadow: 2px 1px 1px black;
+} 
+
+
+iframe{
+    width: 100%;
+}
+
+footer{
+    background-color: darkslategrey;
+    color: white;
+    position: relative;
+    top: 6px;
+    width: 100%;
+    display: flex;
+}
+
+.immaginisponsor{
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 60px;
+    text-align: center;
+}
+
+.facebook {
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+
+
+
+.prenota{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    right: 30%;
+    left: 30%;
+    width: 40%;
+    font-size: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-color: #D9D4CE;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.prenota:hover{
+    background-color: #1D19AC;
+    color: white;
+}
+
+
+
+.carousel-container {
+    position: relative;
+    top: 30px;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.carousel-image.active {
+    opacity: 1;
+}
+  
+.carousel-controls {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+  
+.carousel-controls button {
+    background-color: lightgray;
+    border: none;
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.bandiere{
+    height: 100px;
+    border: solid black 1px;
+}
+
+
+.totalebandiere{
+    font-size: 100%;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 1349px) {
+  
+    header{
+      background-color: transparent;
+    }
+  
+    h1 {
+        top: 80px;
+        font-size: 85px;
+    }
+
+    h4 {
+        top: 60px;
+        left: 50px;
+    }
+  
+    .menutotale {
+      display: none;
+    }
+  
+    .row {
+      width: 35.4%;
+    }
+  
+    .house {
+      width: 35.4%;
+    }
+
+    footer{
+        font-size: 17px;
+    }
+     
+    .totalebandiere{
+        font-size: 40%;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1350px) {
+  
+    .menu-icon {
+      display: none;
+    }
+  
+    .mySidenav {
+      display:none;
+    }
+    
+    .sidenav {
+      display: none;
+    }
+  }
