@@ -374,7 +374,15 @@ a {
     display: block;
 }
   
-  
+
+
+.immaginesotto{
+    background-image: url(' ');
+    background-size: cover; /* Regola la dimensione dell'immagine per coprire completamente il contenitore */
+    background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+    background-attachment: fixed; /* Fissa lo sfondo rispetto alla finestra del browser */
+}
+
 
 /* Bandiera Italia */
 
@@ -416,6 +424,7 @@ a {
     border-radius: 8px;
     border: rgb(201, 198, 189) solid 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
     padding: 20px;
     margin: 20px;
     overflow: hidden;
